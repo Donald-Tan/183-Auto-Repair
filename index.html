@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>183 Auto Repair | Austin, TX</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV (unchanged) -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <div class="logo">
+        <span class="logo-num">183</span>
+        <span class="logo-text">AUTO REPAIR</span>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="tel:5129997854" class="btn-nav">Call Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#reviews" class="mobile-link">Reviews</a></li>
+        <li><a href="#contact" class="mobile-link">Contact</a></li>
+        <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+        <li><a href="tel:5129997854" class="mobile-link call-mobile">Call: 512-999-7854</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- HERO — new: scroll-driven rotating wireframe, scoped to this section -->
+  <section class="hero" data-screen-label="01 Hero">
+    <div class="hero-pin">
+      <canvas id="c"></canvas>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Trusted Auto Repair in Austin, TX</p>
+        <h1>Your Car Deserves<br /><span class="accent">Expert Care.</span></h1>
+        <p class="hero-sub">Honest diagnostics. Quality work. No surprises.</p>
+        <div class="hero-cta">
+          <a href="tel:5129997854" class="btn-primary">Call 512-999-7854</a>
+          <a href="#services" class="btn-secondary">Our Services</a>
+        </div>
+      </div>
+
+      <div class="hero-readout">Rotation <strong id="rotReadout">000</strong>°</div>
+
+      <div class="hero-scroll-cue" id="scrollCue">
+        <span>Scroll to inspect</span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES (unchanged) -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">What We Do</p>
+        <h2>Full-Service Auto Repair</h2>
+        <p class="section-sub">From routine maintenance to complex repairs, we keep your vehicle running at its best.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="10" stroke="currentColor" stroke-width="3"/>
+              <circle cx="24" cy="24" r="4" fill="currentColor"/>
+              <line x1="24" y1="4" x2="24" y2="14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <line x1="24" y1="34" x2="24" y2="44" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <line x1="4" y1="24" x2="14" y2="24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <line x1="34" y1="24" x2="44" y2="24" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Engine Repair &amp; Diagnostics</h3>
+          <p>Check engine lights, performance issues, and complex engine repairs handled by experienced technicians.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="18" width="36" height="18" rx="4" stroke="currentColor" stroke-width="3"/>
+              <path d="M14 18V14a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4" stroke="currentColor" stroke-width="3"/>
+              <line x1="16" y1="27" x2="32" y2="27" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Brake Service</h3>
+          <p>Pad replacements, rotor resurfacing, caliper repairs, and full brake system inspections to keep you safe.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="3"/>
+              <circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="3"/>
+              <line x1="24" y1="8" x2="24" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="24" y1="30" x2="24" y2="40" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="8" y1="24" x2="18" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <line x1="30" y1="24" x2="40" y2="24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Tire &amp; Wheel Services</h3>
+          <p>Tire rotations, balancing, alignments, and flat repairs. We carry a range of tire options for your vehicle.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 36V24l10-12h12l10 12v12" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+              <line x1="8" y1="36" x2="40" y2="36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <rect x="16" y="28" width="8" height="8" rx="1" stroke="currentColor" stroke-width="2.5"/>
+              <rect x="26" y="27" width="6" height="5" rx="1" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Oil Changes &amp; Maintenance</h3>
+          <p>Conventional and synthetic oil changes, filter replacements, fluid top-offs, and full vehicle wellness checks.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 38V22l5-14h18l5 14v16" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+              <line x1="10" y1="38" x2="38" y2="38" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <line x1="10" y1="26" x2="38" y2="26" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="17" cy="32" r="3" stroke="currentColor" stroke-width="2.5"/>
+              <circle cx="31" cy="32" r="3" stroke="currentColor" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <h3>Transmission Service</h3>
+          <p>Fluid flushes, filter changes, leak repairs, and transmission diagnostics for automatic and manual vehicles.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 36c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M24 24V14" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M18 10h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <circle cx="24" cy="10" r="2" fill="currentColor"/>
+              <line x1="12" y1="36" x2="36" y2="36" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>AC &amp; Heating Systems</h3>
+          <p>Refrigerant recharge, compressor repair, heater core service, and full climate system diagnostics.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="16" width="32" height="20" rx="3" stroke="currentColor" stroke-width="3"/>
+              <path d="M16 16V13a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3" stroke="currentColor" stroke-width="3"/>
+              <line x1="8" y1="26" x2="40" y2="26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="4 3"/>
+              <line x1="18" y1="22" x2="30" y2="22" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Electrical &amp; Battery</h3>
+          <p>Battery testing and replacement, alternator and starter repair, wiring diagnostics, and electrical system service.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 30c0-5 4-10 14-10s14 5 14 10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <line x1="10" y1="30" x2="38" y2="30" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path d="M14 30v4M20 30v4M26 30v4M32 30v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <line x1="8" y1="34" x2="40" y2="34" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Suspension &amp; Steering</h3>
+          <p>Shocks, struts, CV joints, tie rods, and power steering repairs to restore a smooth, controlled ride.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-img-wrap">
+        <img src="shop.jpg" alt="183 Auto Repair shop in Austin, TX" class="about-photo" />
+      </div>
+      <div class="about-text">
+        <p class="section-eyebrow">About Us</p>
+        <h2>Locally Owned &amp; Operated in Austin, TX</h2>
+        <p>183 Auto Repair is a trusted, independent auto repair shop serving the Austin area. We built our reputation one vehicle at a time through honest assessments, fair service, and work that holds up.</p>
+        <p>When you bring your car to us, you deal directly with the people doing the work. No upsells, no runaround. Just straight answers and quality repairs.</p>
+        <ul class="about-list">
+          <li><span class="check">&#10003;</span> All makes and models welcome</li>
+          <li><span class="check">&#10003;</span> Experienced, skilled technicians</li>
+          <li><span class="check">&#10003;</span> Honest, upfront communication</li>
+          <li><span class="check">&#10003;</span> Convenient Austin location</li>
+        </ul>
+        <a href="tel:5129997854" class="btn-primary">Schedule Service</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <div class="reviews-title">
+          <p class="section-eyebrow">What Customers Say</p>
+        </div>
+        <a href="https://www.google.com/maps/place/183+AUTO+REPAIR/" target="_blank" rel="noopener" class="btn-outline-red">See All Reviews on Google</a>
+      </div>
+
+      <div class="reviews-carousel" id="reviewsCarousel">
+        <div class="rev-viewport">
+          <div class="rev-track" id="revTrack">
+            <article class="rev-card">
+              <div class="rev-card-top">
+                <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="rev-quote">Brought my truck in with a bad AC and they had it fixed the same day. Honest people, fair service. I won't go anywhere else.</p>
+              <div class="rev-card-foot">
+                <div class="rev-avatar">JM</div>
+                <div class="rev-author-meta">
+                  <p class="rev-name">James M.</p>
+                  <p class="rev-source"><span class="rev-source-icon">G</span> Google Review</p>
+                </div>
+              </div>
+            </article>
+            <article class="rev-card">
+              <div class="rev-card-top">
+                <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="rev-quote">These guys diagnosed an issue two other shops missed. Fast, professional, and they explained everything clearly. Highly recommend.</p>
+              <div class="rev-card-foot">
+                <div class="rev-avatar">SR</div>
+                <div class="rev-author-meta">
+                  <p class="rev-name">Sandra R.</p>
+                  <p class="rev-source"><span class="rev-source-icon">G</span> Google Review</p>
+                </div>
+              </div>
+            </article>
+            <article class="rev-card">
+              <div class="rev-card-top">
+                <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="rev-quote">Great local shop. They got my brakes done quickly and didn't try to sell me anything I didn't need. This is my go-to mechanic now.</p>
+              <div class="rev-card-foot">
+                <div class="rev-avatar">DL</div>
+                <div class="rev-author-meta">
+                  <p class="rev-name">David L.</p>
+                  <p class="rev-source"><span class="rev-source-icon">G</span> Google Review</p>
+                </div>
+              </div>
+            </article>
+            <article class="rev-card">
+              <div class="rev-card-top">
+                <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="rev-quote">Honest shop. They told me my car only needed one repair instead of the three another place quoted. Saved me hundreds of dollars.</p>
+              <div class="rev-card-foot">
+                <div class="rev-avatar">MT</div>
+                <div class="rev-author-meta">
+                  <p class="rev-name">Maria T.</p>
+                  <p class="rev-source"><span class="rev-source-icon">G</span> Google Review</p>
+                </div>
+              </div>
+            </article>
+            <article class="rev-card">
+              <div class="rev-card-top">
+                <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="rev-quote">Got my oil change and a full inspection done in under an hour. Friendly staff and they kept me updated the whole time. 10 out of 10.</p>
+              <div class="rev-card-foot">
+                <div class="rev-avatar">KC</div>
+                <div class="rev-author-meta">
+                  <p class="rev-name">Kevin C.</p>
+                  <p class="rev-source"><span class="rev-source-icon">G</span> Google Review</p>
+                </div>
+              </div>
+            </article>
+            <article class="rev-card">
+              <div class="rev-card-top">
+                <div class="rev-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              </div>
+              <p class="rev-quote">My check engine light had me worried. They ran the diagnostics, explained the issue clearly, and fixed it right. Very trustworthy shop.</p>
+              <div class="rev-card-foot">
+                <div class="rev-avatar">AL</div>
+                <div class="rev-author-meta">
+                  <p class="rev-name">Ashley L.</p>
+                  <p class="rev-source"><span class="rev-source-icon">G</span> Google Review</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <div class="rev-pagination">
+        <div class="rev-dots" id="revDots"></div>
+      </div>
+
+      <div class="reviews-cta">
+        <div class="rev-controls">
+          <button class="rev-arrow rev-prev" aria-label="Previous reviews">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="rev-arrow rev-next" aria-label="Next reviews">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <h2>Ready to get your car fixed right?</h2>
+      <p>Call us today. We'll take a look and give you an honest assessment.</p>
+      <a href="tel:5129997854" class="btn-white">Call 512-999-7854</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
+        <p class="section-eyebrow">Get In Touch</p>
+        <h2>Visit Us or Give Us a Call</h2>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.62 10.79a15.053 15.053 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C9.39 21 3 14.61 3 7a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:5129997854">512-999-7854</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>Austin, TX Area</p>
+              <a href="https://www.google.com/maps/place/183+AUTO+REPAIR/" target="_blank" rel="noopener">Get Directions</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="cc-icon">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div>
+              <h4>Hours</h4>
+              <p>Mon to Fri: 8:00 AM to 6:00 PM</p>
+              <p>Sat: 8:00 AM to 3:00 PM</p>
+              <p>Sun: Closed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55521.06!2d-97.8977779!3d30.2966936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644af4ae16de63f%3A0x1011b97364f874a6!2s183%20AUTO%20REPAIR!5e0!3m2!1sen!2sus!4v1716000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="183 Auto Repair Location">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">
+        <span class="logo-num">183</span>
+        <span class="logo-text">AUTO REPAIR</span>
+      </div>
+      <p class="footer-tagline">Honest repairs. Quality work. Austin, TX.</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <a href="tel:5129997854">512-999-7854</a>
+      </div>
+      <p class="footer-copy">&copy; 2025 183 Auto Repair. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Three.js for the hero wireframe -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="car.js"></script>
+  <script src="script.js"></script>
+
+  <!-- Reviews carousel -->
+  <script>
+    (function () {
+      const carousel = document.getElementById('reviewsCarousel');
+      if (!carousel) return;
+      const track   = document.getElementById('revTrack');
+      const cards   = carousel.querySelectorAll('.rev-card');
+      const prevBtn = document.querySelector('.rev-prev');
+      const nextBtn = document.querySelector('.rev-next');
+      const dotsEl  = document.getElementById('revDots');
+      const currEl  = document.getElementById('revCurr');
+      const totalEl = document.getElementById('revTotal');
+      const total   = cards.length;
+      let idx = 0;
+      let visible = 3;
+      let maxIdx = 0;
+
+      if (totalEl) totalEl.textContent = String(total).padStart(2, '0');
+
+      function getVisible() {
+        const w = window.innerWidth;
+        if (w < 700) return 1;
+        if (w < 1100) return 2;
+        return 3;
+      }
+
+      function renderDots() {
+        dotsEl.innerHTML = '';
+        for (let i = 0; i <= maxIdx; i++) {
+          const d = document.createElement('button');
+          d.className = 'dot' + (i === idx ? ' active' : '');
+          d.setAttribute('aria-label', `Show reviews starting at ${i + 1}`);
+          d.addEventListener('click', () => go(i));
+          dotsEl.appendChild(d);
+        }
+      }
+
+      function applyTransform() {
+        const card = track.querySelector('.rev-card');
+        if (!card) return;
+        const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
+        const cardWidth = card.offsetWidth;
+        const offset = idx * (cardWidth + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+      }
+
+      function updateUI() {
+        dotsEl.querySelectorAll('.dot').forEach((d, j) => d.classList.toggle('active', j === idx));
+        if (currEl) currEl.textContent = String(idx + 1).padStart(2, '0');
+        prevBtn.disabled = idx === 0;
+        nextBtn.disabled = idx >= maxIdx;
+      }
+
+      function go(i) {
+        idx = Math.max(0, Math.min(maxIdx, i));
+        applyTransform();
+        updateUI();
+      }
+
+      function recompute() {
+        visible = getVisible();
+        maxIdx = Math.max(0, total - visible);
+        if (idx > maxIdx) idx = maxIdx;
+        renderDots();
+        // Wait a frame so flex-basis recalculates before measuring
+        requestAnimationFrame(() => { applyTransform(); updateUI(); });
+      }
+
+      prevBtn.addEventListener('click', () => go(idx - 1));
+      nextBtn.addEventListener('click', () => go(idx + 1));
+
+      document.addEventListener('keydown', (e) => {
+        const r = carousel.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > window.innerHeight) return;
+        if (e.key === 'ArrowLeft')  go(idx - 1);
+        if (e.key === 'ArrowRight') go(idx + 1);
+      });
+
+      window.addEventListener('resize', recompute);
+      recompute();
+    })();
+  </script>
+</body>
+</html>
