@@ -539,6 +539,8 @@ function resize(){
   const h = canvas.clientHeight || window.innerHeight;
   renderer.setSize(w, h, false);
   camera.aspect = w / h;
+  // Pull camera back on mobile so the car fits without clipping
+  camera.position.z = w < 700 ? 13.5 : 9.8;
   camera.updateProjectionMatrix();
 }
 resize();
