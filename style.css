@@ -871,6 +871,8 @@ ul { list-style: none; }
   .about, .contact { padding: 64px 0; }
   .hero-readout { display: none; }
   /* Scale the canvas down so the 3D car fits on small screens */
+  .hero { overflow: visible; }
+  .hero-pin { overflow: visible; }
   .hero canvas { transform: scale(0.82); transform-origin: center center; }
   .hero-content { margin-left: 0; padding: 0 20px; }
 }
